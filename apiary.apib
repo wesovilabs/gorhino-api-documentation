@@ -8,8 +8,21 @@ Gorhino is an API to
 ## Applications Collection [/applications]
 
 ### List All applications [GET]
++ Request
 
+    + Headers
+        Location: /applications
+        X-Auth: Token
+    
 + Response 200 (application/json)
+    
+    + Attributes
+        + id (string) - Application identifier
+        + name (string) - Application name
+        + description (string) - Application description
+        
+    
+    + Body
 
         [
             {
@@ -49,6 +62,20 @@ Gorhino is an API to
             
         ]
 
++ Response 409 (application/json)
+    
+    + Attributes
+        + code (string) - Application name
+        + description (string) - Application description
+        
+    
+    + Body
+
+            {
+                "code":"ERR0213123",
+                "description": "Gherkinize",
+            }
+        
 ### Create a New Application [POST]
 
 You may create a new application using this action. It takes a JSON
