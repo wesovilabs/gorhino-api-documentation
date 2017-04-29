@@ -1,48 +1,36 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: http://gorhino.apiblueprint.org/
 
-# Polls API
+# Gorhino API
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+Gorhino is an API to 
 
-## Questions Collection [/questions]
+## Aookucatuibs Collection [/applications]
 
-### List All Questions [GET]
+### List All applications [GET]
 
 + Response 200 (application/json)
 
         [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
+                "name": "Cron Service?",
+                "creation_date": "2017-05-05T08:40:51.620Z",
+                "created_by":"ivan.corrales.solera@gmail.com",
+                "last_modification_date": "2017-08-05T08:40:51.620Z",
+                "updated_by":"developer@wesovilabs.com",
             }
         ]
 
-### Create a New Question [POST]
+### Create a New Application [POST]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
+You may create a new application using this action. It takes a JSON
+object containing an application and a collection of answers in the
 form of choices.
 
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
+            "name": "Favourite programming language?",
             "choices": [
                 "Swift",
                 "Python",
